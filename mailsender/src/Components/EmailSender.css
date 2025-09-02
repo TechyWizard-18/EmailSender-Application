@@ -1,0 +1,222 @@
+/* Glassmorphism card */
+.email-card {
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+    padding: 28px 24px;
+    border-radius: 18px;
+    background: rgba(20, 25, 40, 0.85);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 255, 255, 0.15);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Animated Heading */
+.animated-heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff00ff, #00fff0, #8aff00, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: neon-gradient 6s linear infinite;
+}
+@keyframes neon-gradient {
+    0% { background-position: 0% }
+    100% { background-position: 400% }
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 6px;
+    color: #bbb;
+    font-size: 14px;
+}
+.form-group input {
+    padding: 12px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    transition: all 0.3s;
+}
+.form-group input:focus {
+    border-color: #00fff0;
+    box-shadow: 0 0 6px #00fff0;
+    outline: none;
+}
+
+/* Recipients as Chips */
+.chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.chip-container input {
+    border: none;
+    background: transparent;
+    flex: 1;
+    min-width: 160px;
+}
+.chip {
+    background: rgba(0, 255, 200, 0.2);
+    border: 1px solid #00fff0;
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.chip button {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Rich Editor */
+.editor-wrapper {
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.editor-wrapper .ql-toolbar {
+    background: rgba(0,0,0,0.6);
+    border: none;
+}
+.editor-wrapper .ql-container {
+    min-height: 200px;
+    background: white;
+    color: black;
+    font-size: 15px;
+}
+
+/* Editor dropdown fix */
+.ql-picker-options {
+    background: white !important;
+    color: black !important;
+}
+.ql-picker-item {
+    color: black !important;
+}
+
+/* Attachments */
+.attachments-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    padding: 14px;
+    border-radius: 10px;
+}
+.attachment-item {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.08);
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+.attachment-item button {
+    background: transparent;
+    border: none;
+    color: #ff6b6b;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Send Button */
+.send-btn {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00fff0, #4e8cff, #ff00ff);
+    background-size: 300% 300%;
+    color: white;
+    transition: all 0.4s ease;
+}
+.send-btn:hover {
+    background-position: 100% 0%;
+    box-shadow: 0 0 14px #00fff0;
+}
+.send-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* Messages */
+.error {
+    color: #ff6b6b;
+    font-size: 13px;
+}
+.success {
+    color: #4ade80;
+    font-size: 14px;
+}
+
+/* Loader Spinner */
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 0.8s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Spinner + Text wrapper */
+.spinner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+/* Normal send button */
+/* Normal send button */
+.send-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Purple-Blue */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Disabled state — keep colors, just dim a little */
+.send-btn:disabled {
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Same gradient */
+    opacity: 0.9;  /* slightly faded, but not grey */
+    cursor: not-allowed;
+}
+
+
+/* Loading state (keep vibrant instead of grey) */
+.loading-btn {
+    background: linear-gradient(135deg, #43cea2, #185a9d); /* Aqua-Blue while loading */
+    opacity: 1; /* 🔥 No dull grey */
+    cursor: not-allowed;
+}
